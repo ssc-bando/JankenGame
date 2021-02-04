@@ -1,4 +1,4 @@
-package com.solver;
+package com.solver.Janken;
 
 public enum Result {
     Win,

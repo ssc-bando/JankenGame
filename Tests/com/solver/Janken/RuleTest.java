@@ -1,4 +1,4 @@
-package com.solver;
+package com.solver.Janken;
 
 import org.junit.jupiter.api.Test;
 
@@ -17,7 +17,7 @@ class RuleTest {
     }
 
     @Test
-    public void TestHello() {
-        assertEquals(1, 0);
+    public void TestWinByStone() {
+        assertEquals(Rule.Judge(Pattern.Stone, Pattern.Scissor), is(Result.Win));
     }
 }
