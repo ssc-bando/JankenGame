@@ -63,9 +63,22 @@ disp --> user : 5)結果を画面に出す
 
 ```plantuml
 @startuml
-package a {
-  package b {
-    class x
+package じゃんけんゲーム {
+  package ゲーム自体の進行を管轄するところ{
+    class ゲーム
+  }
+  package 画面への出力/入力を賄うところ{
+    ゲーム --> 画面
+    class 画面 {
+      void 表示(内容)
+      内容 入力()
+    }
+  }
+  package じゃんけんのルールを知っているところ{
+    ゲーム --> ルール
+    class ルール {
+      勝ち負け判定()
+    }
   }
 }
 @enduml
