@@ -20,4 +20,9 @@ class RuleTest {
     public void TestWinByStone() {
         assertThat(Rule.Judge(Pattern.Stone, Pattern.Scissor), is(Result.Win));
     }
+
+    @Test
+    public void TestLooseByStone() {
+        assertThat(Rule.Judge(Pattern.Stone, Pattern.Paper), is(Result.Lose));
+    }
 }
