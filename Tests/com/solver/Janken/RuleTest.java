@@ -33,7 +33,7 @@ class RuleTest {
 
     @Test
     public void TestWinByScissor() {
-        assertThat(Rule.Judge(Pattern.Scissor, Pattern.Scissor), is(Result.Win));
+        assertThat(Rule.Judge(Pattern.Scissor, Pattern.Paper), is(Result.Win));
     }
 
     @Test
