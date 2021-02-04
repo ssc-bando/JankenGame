@@ -18,6 +18,6 @@ class RuleTest {
 
     @Test
     public void TestWinByStone() {
-        assertEquals(Rule.Judge(Pattern.Stone, Pattern.Scissor), is(Result.Win));
+        assertThat(Rule.Judge(Pattern.Stone, Pattern.Scissor), is(Result.Win));
     }
 }
