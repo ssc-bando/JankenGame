@@ -30,4 +30,19 @@ class RuleTest {
     public void TestDrawByStone() {
         assertThat(Rule.Judge(Pattern.Stone, Pattern.Stone), is(Result.Draw));
     }
+
+    @Test
+    public void TestWinByScissor() {
+        assertThat(Rule.Judge(Pattern.Scissor, Pattern.Scissor), is(Result.Win));
+    }
+
+    @Test
+    public void TestLooseByScissor() {
+        assertThat(Rule.Judge(Pattern.Scissor, Pattern.Stone), is(Result.Lose));
+    }
+
+    @Test
+    public void TestDrawByScissor() {
+        assertThat(Rule.Judge(Pattern.Scissor, Pattern.Scissor), is(Result.Draw));
+    }
 }
